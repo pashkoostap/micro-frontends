@@ -3,7 +3,7 @@ import { MarketingApp } from './apps';
 
 const App = () => (
   <div>
-    <h1>Container</h1>
+    <h1>Container app</h1>
 
     <hr />
 
