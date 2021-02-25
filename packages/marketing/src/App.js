@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import { Landing, Pricing } from './components';
 
-const App = () => (
+const App = (props) => (
   <Fragment>
     <StylesProvider>
       <BrowserRouter>
