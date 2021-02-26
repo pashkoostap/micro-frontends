@@ -1,4 +1,5 @@
 const { merge } = require('webpack-merge');
+const path = require('path');
 const { ModuleFederationPlugin } = require('webpack').container;
 
 const common = require('./webpack.common');
@@ -8,9 +9,7 @@ const config = {
   mode: 'development',
   devServer: {
     port: 8080,
-    historyApiFallback: {
-      index: 'index.html',
-    },
+    historyApiFallback: true,
   },
   plugins: [
     new ModuleFederationPlugin({
