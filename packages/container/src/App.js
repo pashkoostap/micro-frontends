@@ -6,7 +6,8 @@ import { MarketingApp } from './apps';
 import { Header } from './components';
 
 const generateClassName = createGenerateClassName({
-  productionPrefix: 'con',
+  // productionPrefix: 'con',
+  seed: 'con',
 });
 
 const App = () => (
