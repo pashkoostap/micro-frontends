@@ -1,13 +1,15 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+
 import { MarketingApp } from './apps';
+import { Header } from './components';
 
 const App = () => (
   <div>
-    <h1>Container</h1>
-
-    <hr />
-
-    <MarketingApp />
+    <BrowserRouter>
+      <Header />
+      <MarketingApp />
+    </BrowserRouter>
   </div>
 );
 
