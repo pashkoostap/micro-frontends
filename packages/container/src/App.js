@@ -12,7 +12,6 @@ const generateClassName = createGenerateClassName({
 
 const App = () => (
   <div>
-    App
     <StylesProvider generateClassName={generateClassName}>
       <BrowserRouter>
         <Header />
