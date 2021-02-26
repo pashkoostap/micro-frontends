@@ -7,11 +7,12 @@ import { Header } from './components';
 
 const generateClassName = createGenerateClassName({
   productionPrefix: 'con',
-  seed: 'con',
+  // seed: 'con',
 });
 
 const App = () => (
   <div>
+    App
     <StylesProvider generateClassName={generateClassName}>
       <BrowserRouter>
         <Header />
