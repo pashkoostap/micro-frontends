@@ -60,6 +60,7 @@ export default function SignUp({ onAuthChanged }) {
         <Typography component='h1' variant='h5'>
           Sign up
         </Typography>
+
         <form
           onSubmit={(e) => e.preventDefault()}
           className={classes.form}
