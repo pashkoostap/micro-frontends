@@ -1,0 +1,24 @@
+{
+  "name": "micro-frontends",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "lerna bootstrap",
+    "start": "lerna run start --stream"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pashkoostap/micro-frontends.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pashkoostap/micro-frontends/issues"
+  },
+  "homepage": "https://github.com/pashkoostap/micro-frontends#readme",
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
+}

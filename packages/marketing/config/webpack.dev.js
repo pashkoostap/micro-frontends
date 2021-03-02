@@ -6,10 +6,14 @@ const {
 const common = require('./webpack.common');
 const { dependencies } = require('../package.json');
 
+const port = 8081;
 const config = {
   mode: 'development',
+  output: {
+    publicPath: `http://localhost:${port}/`,
+  },
   devServer: {
-    port: 8081,
+    port,
     historyApiFallback: true,
   },
   plugins: [
