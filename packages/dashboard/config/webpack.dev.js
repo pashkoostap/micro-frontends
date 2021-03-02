@@ -1,11 +1,12 @@
 const { merge } = require('webpack-merge');
-const path = require('path');
-const { ModuleFederationPlugin } = require('webpack').container;
+const {
+  container: { ModuleFederationPlugin },
+} = require('webpack');
 
 const common = require('./webpack.common');
 const { dependencies } = require('../package.json');
 
-const port = 8080;
+const port = 8083;
 const config = {
   mode: 'development',
   output: {
@@ -14,14 +15,16 @@ const config = {
   devServer: {
     port,
     historyApiFallback: true,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'container',
-      remotes: {
-        marketing: 'marketing@http://localhost:8081/remoteEntry.js',
-        auth: 'auth@http://localhost:8082/remoteEntry.js',
-        dashboard: 'dashboard@http://localhost:8083/remoteEntry.js',
+      name: 'dashboard',
+      filename: 'remoteEntry.js',
+      exposes: {
+        './DashboardApp': './src/bootstrap',
       },
       shared: dependencies,
     }),
