@@ -129,7 +129,7 @@ export default function SignUp({ onAuthChanged }) {
             className={classes.submit}
             onClick={() => onAuthChanged({ email: emailRef.current.value })}
           >
-            Sign Up
+            Sign up
           </Button>
           <Grid container justify='flex-end'>
             <Grid item>
